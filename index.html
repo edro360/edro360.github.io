@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edwin Rojas-Torres Portfolio</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="#">ERT</a>
+    <div>
+      <a href="#">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <h1>Edwin Rojas-Torres</h1>
+    <p class="subtitle">Embedded Systems &amp; FPGA Engineer</p>
+    <p class="tagline">Bridging hardware and software, from FPGA-accelerated research to production infrastructure.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn">See my work</a>
+      <a href="resume.pdf" class="btn" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+        </svg>
+        Resume/CV
+      </a>
+    </div>
+    <div class="hero-about" id="about">
+      <div class="hero-bio">
+        <p>I'm a computer engineer with hands-on experience across FPGA and RTL development, embedded systems, and
+          full-stack software engineering. My work has included modifying DMA Engine IP in SystemVerilog for
+          hardware-accelerated research, automotive embedded diagnostics using CAN and LIN bus protocols, and building
+          backend infrastructure that significantly cut production API load.</p>
+        <p>I graduated from UC Santa Cruz in December 2023 with a degree in Computer Engineering, where my senior thesis
+          focused on FPGA-accelerated DRAM leakage characterization. I'm currently focused on embedded systems, FPGA,
+          and firmware engineering roles where I can put that hardware and software background to work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <a href="#" class="card-link">
+        <div class="card">
+          <h3>DRAM Leakage Characterization</h3>
+          <p>Senior thesis project characterizing DRAM leakage current through a custom FPGA-accelerated DMA path.
+            Modified DMA Engine IP in SystemVerilog on a Xilinx Alveo U200/U55C and built a Python test framework
+            achieving consistent leakage timing around 0.02s across millions of test cycles.</p>
+          <div class="tags"><span>SystemVerilog</span><span>Vivado</span><span>Python</span></div>
+        </div>
+      </a>
+      <a href="#" class="card-link">
+        <div class="card">
+          <h3>Contentful API Caching Fix</h3>
+          <p>Diagnosed a caching gap at Blue Trail Software that cut Contentful API calls from about 3 million to 12,000
+            per day. The fix shipped the same day it was identified.</p>
+          <div class="tags"><span>Node.js</span><span>AWS</span><span>OAuth 2.0</span></div>
+        </div>
+      </a>
+      <a href="#" class="card-link">
+        <div class="card">
+          <h3>CAN/LIN Bus Diagnostics</h3>
+          <p>Automotive embedded systems diagnostics for Stellantis, using Vector CANoe to validate CAN and LIN bus
+            communication across vehicle networks.</p>
+          <div class="tags"><span>CAN bus</span><span>LIN bus</span><span>Vector CANoe</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="entry">
+        <div class="entry-head">
+          <span class="role">Software Engineer</span>
+          <span class="company">Blue Trail Software</span>
+          <span class="date">[Add dates] - May 2026</span>
+        </div>
+        <p>Built OAuth 2.0 authentication infrastructure and backend services in Node.js on AWS, including a caching fix
+          that cut Contentful API calls from about 3 million to 12,000 per day.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="role">Embedded Systems Engineer</span>
+          <span class="company">Stellantis (via Cognizant/Revature)</span>
+          <span class="date">[Add dates]</span>
+        </div>
+        <p>Performed CAN and LIN bus diagnostics using Vector CANoe to validate automotive embedded systems and support
+          vehicle network troubleshooting.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="role">Research Assistant</span>
+          <span class="company">UC Santa Cruz</span>
+          <span class="date">[Add dates]</span>
+        </div>
+        <p>Modified DMA Engine IP in SystemVerilog for a senior thesis on FPGA-accelerated DRAM leakage
+          characterization, using Xilinx Alveo and PYNQ/XRT tooling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's connect. Reach out anytime.</p>
+    <div class="contact-links">
+      <a href="mailto:redwin925a@gmail.com" class="btn">Email</a>
+      <a href="https://github.com/edro360" class="btn">GitHub</a>
+      <a href="https://linkedin.com/in/edwin-rojas-torres" class="btn">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Edwin Rojas-Torres. Built with vanilla HTML &amp; CSS.</p>
+  </footer>
+</body>
+
+</html>

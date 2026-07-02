@@ -1,0 +1,238 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #1e1e2e;
+  --bg-alt:    #181825;
+  --bg-nav:    #11111b;
+  --text:      #cdd6f4;
+  --text-dim:  #a6adc8;
+  --accent:    #cba6f7;
+  --accent2:   #89b4fa;
+  --surface:   #313244;
+  --border:    #45475a;
+  --green:     #a6e3a1;
+  --peach:     #fab387;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }
+
+nav {
+  position: fixed;
+  top: 0; width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+nav > a { font-weight: 700; font-size: 1.25rem; }
+nav div { display: flex; gap: 1.5rem; }
+
+section {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#hero {
+  margin-top: 4rem;
+  text-align: center;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--accent2);
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btns .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 9999px;
+  color: var(--accent);
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.hero-about {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.hero-bio { flex: 1; }
+.hero-bio p { margin-bottom: 1rem; color: var(--text-dim); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card h3 { font-size: 1.2rem; color: var(--peach); }
+.card p { flex: 1; color: var(--text-dim); font-size: 0.9rem; line-height: 1.5; }
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+.card-link .card {
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-link:hover .card {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.tags span {
+  background: var(--bg);
+  color: var(--green);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.role { font-weight: 600; color: var(--peach); }
+.company { color: var(--text); }
+.date { font-size: 0.85rem; color: var(--text-dim); margin-left: auto; }
+.entry p { color: var(--text-dim); font-size: 0.9rem; }
+
+#contact { text-align: center; }
+#contact p { color: var(--text-dim); margin-bottom: 1.5rem; }
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-links .btn {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  nav { padding: 0.75rem 1rem; }
+  nav div { gap: 1rem; }
+  h1 { font-size: 2rem; }
+  .subtitle { font-size: 1.2rem; }
+  section { padding: 3rem 1rem; }
+  #hero { padding-top: 5rem; padding-bottom: 4rem; }
+  .hero-about { flex-direction: column; align-items: center; }
+  .entry-head { flex-direction: column; gap: 0.25rem; }
+  .entry .date { margin-left: 0; }
+}
